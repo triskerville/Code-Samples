@@ -1,7 +1,7 @@
 //>=------------------------------------------------------------------------=<//
-// file:	  IBuilder.h
-// author:	Tristan Baskerville
-// brief:	  Builder classes almost always use the same Build() implementation,
+// file:    IBuilder.h
+// author:  Tristan Baskerville
+// brief:   Builder classes almost always use the same Build() implementation,
 //          this class defines a common interface to prioritize move operations.
 //
 // Copyright © 2022 DigiPen, All rights reserved.

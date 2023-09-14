@@ -1,7 +1,7 @@
 //>=------------------------------------------------------------------------=<//
-// file:	  IDependencyList.h
-// author:	Tristan Baskerville
-// brief:	  Provides dependent IServices as a Tuple of shared pointers.
+// file:    IDependencyList.h
+// author:  Tristan Baskerville
+// brief:   Provides dependent IServices as a Tuple of shared pointers.
 //          Constructing a dependent service before its dependency emits
 //          a compiler error.
 //
