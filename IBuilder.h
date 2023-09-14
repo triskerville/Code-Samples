@@ -2,7 +2,7 @@
 // file:    IBuilder.h
 // author:  Tristan Baskerville
 // brief:   Builder classes almost always use the same Build() implementation,
-//          this class defines a common interface to prioritize move operations.
+//          this class defines a common interface to prioritize move ops.
 //
 // Copyright © 2022 DigiPen, All rights reserved.
 //>=------------------------------------------------------------------------=<//
