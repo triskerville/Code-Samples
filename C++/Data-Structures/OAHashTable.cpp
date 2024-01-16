@@ -14,7 +14,7 @@
 #include <cmath> // std::ciel
 
 //>=------------------------------------------------------------------------=<//
-/*!
+/*
     \brief
       Constructs an OAHashTable with the given configuration passed in.
       This config dictates things like the starting table size, hash
@@ -38,7 +38,7 @@ OAHashTable<T>::OAHashTable(const OAHTConfig& Config)
 }
 
 //>=------------------------------------------------------------------------=<//
-/*!
+/*
     \brief
       Destructs an OAHashTable instance. Uses default destructor for
       items such as stats and config. Calls the clear operator in the
@@ -56,7 +56,7 @@ OAHashTable<T>::~OAHashTable()
 }
 
 //>=------------------------------------------------------------------------=<//
-/*!
+/*
     \brief
       Given a key and some data, store the data in the hash table using
       the hashed key to search for appropriate storage locations.
@@ -92,7 +92,7 @@ void OAHashTable<T>::insert(const char* Key, const T& Data)
 }
 
 //>=------------------------------------------------------------------------=<//
-/*!
+/*
     \brief
       Given a key, remove the element from the hash table by searching
       the hash table with the hashed key to find where the data is stored.
@@ -123,7 +123,7 @@ void OAHashTable<T>::remove(const char* Key)
 }
 
 //>=------------------------------------------------------------------------=<//
-/*!
+/*
     \brief
       Given a key, find and return the associated data that was originally
       passed along with the key. Hashes the key and uses linear probing
@@ -149,7 +149,7 @@ const T& OAHashTable<T>::find(const char* Key) const
 }
 
 //>=------------------------------------------------------------------------=<//
-/*!
+/*
     \brief
       Empties the entire hash table of any and all elements. Calls the
       client defined free function on all remaining elements in the hash table. 
@@ -175,7 +175,7 @@ void OAHashTable<T>::clear()
 }
 
 //>=------------------------------------------------------------------------=<//
-/*!
+/*
     \brief
       Returns the internal stats being tracked within the hash table
       and give a copy to the client.
@@ -190,7 +190,7 @@ OAHTStats OAHashTable<T>::GetStats() const
 }
 
 //>=------------------------------------------------------------------------=<//
-/*!
+/*
     \brief
       Returns the internal array used in the hash table for all the
       slots, which hold the key and data pairs being used by the client.
@@ -205,7 +205,7 @@ typename OAHashTable<T>::OAHTSlot const* OAHashTable<T>::GetTable() const
 }
 
 //>=------------------------------------------------------------------------=<//
-/*!
+/*
     \brief
       Given a size, allocate a slot array large enough to be used for 
       the hash table internal memory. Calls the new[] operator, sets all
@@ -246,7 +246,7 @@ OAHashTable<T>::allocate_table(unsigned size)
 }
 
 //>=------------------------------------------------------------------------=<//
-/*!
+/*
     \brief
       Given a reference to a slot, set its key and its data fields with the
       the provided method parameters. Uses set_key(...) to set the internal Key.
@@ -270,7 +270,7 @@ void OAHashTable<T>::init_slot(OAHTSlot& slot, const char* key, const T& data)
 }
 
 //>=------------------------------------------------------------------------=<//
-/*!
+/*
     \brief
       Given a pointer to a char array and a string, store the string
       into the char array using strncpy. Specific function used as
@@ -295,7 +295,7 @@ void OAHashTable<T>::set_key(char* slot_key, const char* string_key)
 }
 
 //>=------------------------------------------------------------------------=<//
-/*!
+/*
     \brief
       When called, recalculate the internal table array size using the growth
       factor and finding the closest prime. Allocates a table using this
@@ -334,7 +334,7 @@ void OAHashTable<T>::grow_table()
 }
 
 //>=------------------------------------------------------------------------=<//
-/*!
+/*
     \brief
       Decides if the current internal array needs to be grown or not.
       Calculates the current load factor and compares against the max allowed.
@@ -355,7 +355,7 @@ bool OAHashTable<T>::need_growing() const
 }
 
 //>=------------------------------------------------------------------------=<//
-/*!
+/*
     \brief
       Given an index, and assuming the deletion policy is set to "pack",
       pack the elements that are following the previously deleted element.
@@ -388,7 +388,7 @@ void OAHashTable<T>::pack(int index)
 }
 
 //>=------------------------------------------------------------------------=<//
-/*!
+/*
     \brief
       Searches the internal table array for a matching key hash, returning
       an index. Can be used when inserting an element or removing one, 
@@ -457,7 +457,7 @@ int OAHashTable<T>::index_of(const char* Key, OAHTSlot*& slot) const
 }
 
 //>=------------------------------------------------------------------------=<//
-/*!
+/*
     \brief
       Calls the client-defined free function if one is provided, and
       sets the state to whatever is appropriate. Updates the internal
@@ -482,7 +482,7 @@ void OAHashTable<T>::delete_slot(OAHTSlot& slot,
 }
 
 //>=------------------------------------------------------------------------=<//
-/*!
+/*
     \brief
       Helper function to call when we cannot find an element the client 
       requested to find. Passes the string parameter for the 

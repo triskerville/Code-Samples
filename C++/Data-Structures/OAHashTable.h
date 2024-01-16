@@ -27,7 +27,7 @@
 #include <string>
 #include "Support.h"
 
-/*!
+/*
 client-provided hash function: takes a key and table size,
 returns an index in the table.
 */
@@ -44,7 +44,7 @@ class OAHashTableException
     std::string message_; //!< Readable string describing the exception
 
   public:
-    /*!
+    /*
       Non-Default Constructor
 
       \param ErrCode
@@ -60,7 +60,7 @@ class OAHashTableException
     virtual ~OAHashTableException() {
     }
 
-    /*!
+    /*
       Retrieves exception code
 
       \return
@@ -70,7 +70,7 @@ class OAHashTableException
       return error_code_; 
     }
 
-    /*!
+    /*
       Retrieve human-readable string describing the exception
 
       \return
@@ -111,7 +111,7 @@ class OAHashTable
     //! Configuration for the hash table
     struct OAHTConfig
     {
-      /*!
+      /*
         Constructor
 
         \param InitialTableSize
