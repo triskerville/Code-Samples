@@ -1,4 +1,4 @@
-# Code-Samples
+# Code-Samples [Tristan Baskerville]
 This repo serves to showcase various works during my time at DigiPen.
 
 ## C++
