@@ -23,7 +23,7 @@ namespace tbasque
     /// \tparam T Type of object this Builder is constructing
     ///
     /// \returns  The instance stored in T as an r-value
-    [[nodiscard]] T&& Build() 
+    [[nodiscard]] inline T&& Build() 
     {
       return std::move(instance_); 
     }

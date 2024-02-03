@@ -19,12 +19,12 @@ int main(void)
   using namespace tbasque;
   //  build our application with our desired setup
   Application app = Application::Builder{}
-    .AppendService<MessageService>()
-    .AppendService<WindowService>()
-    .AppendService<GUIService>()
-    .AppendService<AudioService>()
-    .AppendService<RenderingService>()
-    .AppendService<SceneLogic>()
+    .InstallService<MessageService>()
+    .InstallService<WindowService>()
+    .InstallService<GUIService>()
+    .InstallService<AudioService>()
+    .InstallService<RenderingService>()
+    .InstallService<SceneLogic>()
     .Build();
   //  start running our application. returns at end of application
   app.Run();

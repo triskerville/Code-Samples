@@ -14,8 +14,8 @@ namespace tbasque
 {
   Application::~Application()
   {
-    serviceOrder_.clear();
     serviceCollection_.clear();
+    serviceOrder_.clear();
   }
 
   Application::Application(Application&& _other) noexcept
@@ -26,8 +26,8 @@ namespace tbasque
 
   Application& Application::operator=(Application&& _other) noexcept
   {
-    this->serviceOrder_ = std::move(_other.serviceOrder_);
     this->serviceCollection_ = std::move(_other.serviceCollection_);
+    this->serviceOrder_ = std::move(_other.serviceOrder_);
     this->isRunning_ = _other.isRunning_;
 
     return *this;

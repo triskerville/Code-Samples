@@ -1,8 +1,10 @@
 // file:    Application.h
 // author:  Tristan Baskerville
-// brief:   
+// brief:   Application class that installs IServices while building, and
+//          manages the lifetime of these services until the application closes.
 //
 // Copyright © 2021 DigiPen, All rights reserved.
+
 #pragma once
 
 #include <tbasque_fwd.h>
@@ -24,25 +26,59 @@ namespace tbasque
 
     void Run();
   private:
-    //  because we lose ordering with an unordered_map,
-    //  we preserve it here by appending the key to this collection
+    
+    //  Services run first to last based on their order of installation.
+    //  type_index vector is used to remember that ordering.
+    std::unordered_map<std::type_index, SPointer<IService>> serviceCollection_{};
     std::vector<std::type_index> serviceOrder_{};
-    //  because we are storing pointers to the base class,
-    //  we use the derived type as the key
-    std::unordered_map<
-      std::type_index, SPointer<IService>> serviceCollection_{};
+    
     bool isRunning_{ true };
   };
 
   class Application::Builder : public IBuilder<Application>
   {
   public:
-    template <typename T>
-    Builder& AppendService();
+    template <typename S>
+    inline Builder& InstallService();
+
   private:
-    template <typename T>
-    void SetDependencyService(SPointer<T>& _pService);
+    template <typename S>
+    inline void setDependencyPointer(SPointer<S>& _pServiceRef);
   };
 }
 
-#include <Application/Application.inl>
+template<typename S>
+inline auto Application::Builder::InstallService() -> Builder&
+{
+  static_assert(std::is_base_of<IService, S>::value, "Type passed to InstallService must derive IService.");
+  
+  typename S::DependencyList::Tuple dependencyTuple{};
+
+  //  call helper function for each element in our Tuple
+  std::apply(
+    [this](auto&&... pService) { (setDependencyPointer(pService), ...); },
+    dependencyTuple
+  );
+
+  //  construct our service. pass along the dependency list we just created
+  auto pService = std::make_shared<S>(std::move(dependencyTuple));
+
+
+  //  order MUST be filled along with collection, as it is used to
+  //  ensure services are called in the order they are created
+  instance_.serviceOrder_.emplace_back(typeid(S));
+  instance_.serviceCollection_.emplace(typeid(S), pService);
+
+  return *this;
+}
+
+template<typename S>
+inline void Application::Builder::setDependencyPointer(SPointer<S>& _pServiceRef)
+{
+  //  find the instance of our dependency that Application manages.
+  //  fails fast if no instance exists (missing dependency).
+  auto service = instance_.serviceCollection_.at(typeid(S));
+  //  forward this service to the dependee service, to be retrieved later
+  _pServiceRef = std::dynamic_pointer_cast<S>(service);
+}
+
