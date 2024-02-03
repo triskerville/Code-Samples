@@ -2,7 +2,7 @@
 This repo serves to showcase various works during my time at DigiPen.
 
 ## C++
-Examples include my best work. Some files were picked to showcase Doxygen style comments.
+Current examples include code from my Data Structures course, and a example engine stub created to showcase Engine Architechure and strong C++ principles. More examples to come.
 
 ## Example Reports
 Small example reports from the Advanced Real-time Rendering Techniques course I took during my senior year.
