@@ -2,7 +2,7 @@
 // author:  Tristan Baskerville
 // brief:   
 //
-// Copyright © 2021 DigiPen, All rights reserved.
+// Copyright © 2024 DigiPen, All rights reserved.
 
 #include <stdafx.h>
 
@@ -10,7 +10,6 @@
 #include <Services/MessageService.h>
 #include <Services/WindowService.h>
 #include <Services/GUIService.h>
-#include <Services/AudioService.h>
 #include <Services/RenderingService.h>
 #include <Services/SceneLogic.h>
 
@@ -22,7 +21,6 @@ int main(void)
     .InstallService<MessageService>()
     .InstallService<WindowService>()
     .InstallService<GUIService>()
-    .InstallService<AudioService>()
     .InstallService<RenderingService>()
     .InstallService<SceneLogic>()
     .Build();

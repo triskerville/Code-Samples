@@ -2,10 +2,11 @@
 // author:  Tristan Baskerville
 // brief:   
 //
-// Copyright © 2021 DigiPen, All rights reserved.
+// Copyright © 2024 DigiPen, All rights reserved.
 
 #pragma once
 
+#include <tbasque_fwd.h>
 #include <Interfaces/IService.h>
 #include <Interfaces/IDependencyList.h>
 #include <Interfaces/IBindable.h>
