@@ -24,6 +24,7 @@ namespace tbasque
 
     IDependencyList(Tuple&& t) : pServicesTuple_(std::forward<Tuple>(t)) {}
     IDependencyList(DependencyList&&) = default;
+    virtual ~IDependencyList() = default;
 
   protected:
     template <typename S>
