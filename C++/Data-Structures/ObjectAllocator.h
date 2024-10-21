@@ -1,17 +1,27 @@
-//>=-----------------------------------------------------------------------=<//
-/*!
-\file    ObjectAllocator.h
-\author  Tristan Green
-\par     email: green.t\@digipen.edu
-\par     DigiPen login: green.t
-\par     Course: CS280
-\par     Assignment #1
-\date    05/21/2020
-\brief
-    This file contains the interface for the Object Allocator class.
-
-*/
-//>=-----------------------------------------------------------------------=<//
+//>=------------------------------------------------------------------------=<//
+// file:    ObjectAllocator.h
+// author:  Tristan Baskerville
+// course:  CS280
+// brief:   
+//   This file contains the interface for the Object Allocator class.
+//
+//   Public operations include:
+//     + Constructor/Destructor
+//     + Allocating an object
+//     + Freeing and object
+//     + Dumping in-use memory
+//     + Verifying pad bytes for corrupted memory
+//     + Enabling/Disabling debug functionality
+//     + Getter for freelist
+//     + Getter for pagelist
+//     + Getter for configuration
+//     + Getter for statistics
+//
+//   Hours spent on this assignment: ~35
+//   Specific portions that gave you the most trouble: External Headers
+//
+// Copyright © 2020 DigiPen, All rights reserved.
+//>=------------------------------------------------------------------------=<//
 
 #ifndef OBJECTALLOCATORH
 #define OBJECTALLOCATORH
