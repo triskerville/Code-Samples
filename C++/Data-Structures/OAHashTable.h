@@ -15,6 +15,7 @@
 //     + Method to clear all elements
 //     + Getter for the internal statistics
 //     + Getter for the internal table array
+//
 //   Hours spent on this assignment: ~10
 //   Specific portions that gave you the most trouble: 
 //     index_of, was also fun seeing how vastly different each iteration was.
