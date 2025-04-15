@@ -7,7 +7,7 @@
 #include <stdafx.h>
 #include <Interfaces/IRenderable.h>
 
-namespace tbasque
+namespace triskerville
 {
   IRenderable::IRenderable(IRenderable&& _other) noexcept
     : handle_(_other.handle_)

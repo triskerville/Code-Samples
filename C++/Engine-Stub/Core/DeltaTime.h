@@ -6,7 +6,7 @@
 
 #pragma once
 
-namespace tbasque
+namespace triskerville
 {
   class DeltaTime
   {

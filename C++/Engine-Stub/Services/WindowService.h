@@ -6,13 +6,13 @@
 
 #pragma once
 
-#include <tbasque_fwd.h>
+#include <triskerville_fwd.h>
 #include <Interfaces/IService.h>
 #include <Interfaces/IDependencyList.h>
 #include <Interfaces/IBindable.h>
 #include <Core/Delegate.h>
 
-namespace tbasque
+namespace triskerville
 {
   class WindowService : public virtual IService,
                         public virtual IDependencyList<MessageService>,

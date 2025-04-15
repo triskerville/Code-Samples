@@ -12,7 +12,7 @@
 #include <Core/InputEvent.h>
 #include <Graphics/Common.h>
 
-namespace tbasque
+namespace triskerville
 {
   //  used to help keep track of GLFW/Glad initialization
   uint WindowService::windowCount_ = 0;

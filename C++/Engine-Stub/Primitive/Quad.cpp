@@ -7,7 +7,7 @@
 #include <stdafx.h>
 #include <Primitive/Quad.h>
 
-namespace tbasque::Primitive
+namespace triskerville::Primitive
 {
   Quad2D::Quad2D(Elements const& _e)
     : elements(_e)

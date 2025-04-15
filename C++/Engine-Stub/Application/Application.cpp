@@ -10,7 +10,7 @@
 #include <Core/DeltaTime.h>
 #include <Core/EResult.h>
 
-namespace tbasque
+namespace triskerville
 {
   Application::~Application()
   {
@@ -29,7 +29,8 @@ namespace tbasque
     this->serviceCollection_ = std::move(_other.serviceCollection_);
     this->serviceOrder_ = std::move(_other.serviceOrder_);
     this->isRunning_ = _other.isRunning_;
-
+    _other.isRunning_ = false;
+    
     return *this;
   }
 

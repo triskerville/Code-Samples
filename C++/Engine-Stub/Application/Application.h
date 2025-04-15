@@ -7,11 +7,11 @@
 
 #pragma once
 
-#include <tbasque_fwd.h>
+#include <triskerville_fwd.h>
 #include <Interfaces/INoCopy.h>
 #include <Interfaces/IBuilder.h>
 
-namespace tbasque
+namespace triskerville
 {
   class Application : public virtual INoCopy
   {

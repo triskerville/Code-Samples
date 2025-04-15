@@ -8,7 +8,7 @@
 
 #pragma once
 
-namespace tbasque
+namespace triskerville
 {
   template <class... Service>
   class IDependencyList

@@ -9,7 +9,7 @@
 #include <Interfaces/IBindable.h>
 #include <Interfaces/INoCopy.h>
 
-namespace tbasque
+namespace triskerville
 {
   /// Defines an interface for an object that is typically passed to 
   /// a rendering API such as OpenGL. We use virtual inheritance to avoid

@@ -6,7 +6,7 @@
 
 #pragma once
 
-namespace tbasque
+namespace triskerville
 {
   /// defines an interface where the only desired functions are Bind/Unbind,
   /// which is a commonly used pattern in this framework

@@ -6,7 +6,7 @@
 
 #pragma once
 
-namespace tbasque
+namespace triskerville
 {
   /// defines a class that cannot be copied, used when a class has either an 
   /// expensive copy instruction, or doesn't make sense to copy. this class 

@@ -6,12 +6,12 @@
 
 #pragma once
 
-#include <tbasque_fwd.h>
+#include <triskerville_fwd.h>
 #include <Interfaces/IService.h>
 #include <Interfaces/IDependencyList.h>
 #include <Graphics/Platform/Renderer.h>
 
-namespace tbasque
+namespace triskerville
 {
   struct SceneWindow
   {

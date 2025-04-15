@@ -29,7 +29,7 @@
 #include <World/Camera.h>
 #include <World/LocalLight.h>
 
-namespace tbasque
+namespace triskerville
 {
   static void onCameraUpdate(MessageService::Observer, Hash, void*);
 

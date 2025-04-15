@@ -7,7 +7,7 @@
 
 #pragma once
 
-namespace tbasque
+namespace triskerville
 {
   /// Interface class for buildable objects. Provides a common function to 
   /// output the object instance with a move operation.

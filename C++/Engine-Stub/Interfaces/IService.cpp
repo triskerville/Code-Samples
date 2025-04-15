@@ -7,7 +7,7 @@
 #include <stdafx.h>
 #include <Interfaces/IService.h>
 
-namespace tbasque
+namespace triskerville
 {
   bool IService::ShouldTerminate()
   {

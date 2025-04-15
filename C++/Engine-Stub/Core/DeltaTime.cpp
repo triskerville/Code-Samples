@@ -7,7 +7,7 @@
 #include <stdafx.h>
 #include <Core/DeltaTime.h>
 
-namespace tbasque
+namespace triskerville
 {
   DeltaTime::DeltaTime(float& _dt)
     : dt_(_dt)

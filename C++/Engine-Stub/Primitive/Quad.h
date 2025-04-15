@@ -6,7 +6,7 @@
 
 #pragma once
 
-namespace tbasque::Primitive
+namespace triskerville::Primitive
 {
   struct Quad2D
   {

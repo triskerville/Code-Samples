@@ -15,7 +15,7 @@
 
 int main(void)
 {
-  using namespace tbasque;
+  using namespace triskerville;
   //  build our application with our desired setup
   Application app = Application::Builder{}
     .InstallService<MessageService>()

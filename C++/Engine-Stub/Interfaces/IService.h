@@ -7,10 +7,10 @@
 #pragma once
 
 //  include forward declare for EResult
-#include <tbasque_fwd.h>
+#include <triskerville_fwd.h>
 #include <Interfaces/INoCopy.h>
 
-namespace tbasque
+namespace triskerville
 {
   class IService : public virtual INoCopy
   {
