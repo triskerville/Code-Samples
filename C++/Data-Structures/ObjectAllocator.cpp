@@ -5,18 +5,6 @@
 // brief:  
 //   This file contains the implementation for the Object Allocator class.
 //
-//   Public operations include:
-//     + Constructor/Destructor
-//     + Allocating an object
-//     + Freeing and object
-//     + Dumping in-use memory
-//     + Verifying pad bytes for corrupted memory
-//     + Enabling/Disabling debug functionality
-//     + Getter for freelist
-//     + Getter for pagelist
-//     + Getter for configuration
-//     + Getter for statistics
-//
 //   Hours spent on this assignment: ~35
 //   Specific portions that gave you the most trouble: External Headers
 //
